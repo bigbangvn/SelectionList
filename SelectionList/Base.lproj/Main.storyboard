@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RUa-MR-zog">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5xX-iI-7hm">
+            <objects>
+                <viewController id="RUa-MR-zog" customClass="ViewController" customModule="SelectionList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="65G-AE-vkp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rpt-Gs-l5G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qUv-TS-jSX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N79-I2-M4u">
+                                <rect key="frame" x="116" y="183.5" width="143" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmq-Mt-d5p">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="XVr-0K-w0U"/>
+                                        </constraints>
+                                        <state key="normal" title="Language List"/>
+                                        <connections>
+                                            <action selector="handleLanguageList:" destination="RUa-MR-zog" eventType="touchUpInside" id="itB-zl-nN3"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SelectedLanguage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3K-7N-DyF" userLabel="SelectedLanguage">
+                                        <rect key="frame" x="0.0" y="90" width="143" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="z3C-GD-G1x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Country" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIw-R9-t9s">
+                                        <rect key="frame" x="0.0" y="270" width="143" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="d0L-b7-DGK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KP-eE-4gH">
+                                        <rect key="frame" x="0.0" y="180" width="143" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Vj2-g5-b0k"/>
+                                        </constraints>
+                                        <state key="normal" title="Country List"/>
+                                        <connections>
+                                            <action selector="handleCountryList:" destination="RUa-MR-zog" eventType="touchUpInside" id="TYT-0A-gtF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Cmq-Mt-d5p" firstAttribute="leading" secondItem="N79-I2-M4u" secondAttribute="leading" id="1Kt-0C-jkI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cmq-Mt-d5p" secondAttribute="trailing" id="E7X-37-kxl"/>
+                                    <constraint firstItem="7KP-eE-4gH" firstAttribute="leading" secondItem="N79-I2-M4u" secondAttribute="leading" id="Kna-Xd-dAk"/>
+                                    <constraint firstItem="nIw-R9-t9s" firstAttribute="top" secondItem="7KP-eE-4gH" secondAttribute="bottom" constant="60" id="To6-CD-ko5"/>
+                                    <constraint firstAttribute="trailing" secondItem="f3K-7N-DyF" secondAttribute="trailing" id="bbG-s7-sAd"/>
+                                    <constraint firstAttribute="trailing" secondItem="nIw-R9-t9s" secondAttribute="trailing" id="eBB-fz-N5A"/>
+                                    <constraint firstAttribute="trailing" secondItem="7KP-eE-4gH" secondAttribute="trailing" id="j4c-8V-ylj"/>
+                                    <constraint firstItem="7KP-eE-4gH" firstAttribute="top" secondItem="f3K-7N-DyF" secondAttribute="bottom" constant="60" id="jw6-55-Nem"/>
+                                    <constraint firstItem="f3K-7N-DyF" firstAttribute="top" secondItem="Cmq-Mt-d5p" secondAttribute="bottom" constant="60" id="liM-U9-Xkr"/>
+                                    <constraint firstAttribute="bottom" secondItem="nIw-R9-t9s" secondAttribute="bottom" id="wXe-al-tVB"/>
+                                    <constraint firstItem="nIw-R9-t9s" firstAttribute="leading" secondItem="N79-I2-M4u" secondAttribute="leading" id="x9s-yX-x8S"/>
+                                    <constraint firstItem="Cmq-Mt-d5p" firstAttribute="top" secondItem="N79-I2-M4u" secondAttribute="top" id="xxL-uc-lhU"/>
+                                    <constraint firstItem="f3K-7N-DyF" firstAttribute="leading" secondItem="N79-I2-M4u" secondAttribute="leading" id="yUX-78-g06"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N79-I2-M4u" firstAttribute="centerX" secondItem="qUv-TS-jSX" secondAttribute="centerX" id="XeD-yE-sdM"/>
+                            <constraint firstItem="N79-I2-M4u" firstAttribute="centerY" secondItem="qUv-TS-jSX" secondAttribute="centerY" id="rT6-y5-Tqs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectedCountryLabel" destination="nIw-R9-t9s" id="Uk1-42-z7I"/>
+                        <outlet property="selectedLanguageLabel" destination="f3K-7N-DyF" id="BdD-ZL-xDe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdf-t2-5tr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31.199999999999999" y="-30.134932533733135"/>
+        </scene>
+    </scenes>
+</document>
